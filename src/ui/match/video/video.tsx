@@ -23,12 +23,14 @@ import { RawFilesFolderPath } from './raw-files-folder-path';
 import { ResetSettingsButton } from './reset-settings-button';
 import { SequencesSummary } from './sequences-summary';
 import { EditSequencesSettingsButton } from './sequences/edit-sequences/edit-sequences-settings-button';
+import { AllVideo } from './all-video';
 
 export function MatchVideo() {
   return (
     <Content>
       <div className="flex flex-col">
         <div className="flex items-center gap-x-8">
+          <AllVideo />
           <AddVideoToQueueButton />
           <AddNewSequenceButton />
           <GeneratePlayerSequencesButton />
