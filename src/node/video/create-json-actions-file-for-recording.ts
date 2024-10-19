@@ -37,7 +37,7 @@ export async function createJsonActionsFileForRecording({
     json.addExecCommand(1, command);
   }
   if (showOnlyDeathNotices) {
-    json.addExecCommand(1, 'cl_draw_only_deathnotices 1');
+    json.addExecCommand(1, 'cl_draw_only_deathnotices 0');
   }
 
   json.addExecCommand(0, `mirv_deathmsg lifetime ${deathNoticesDuration}`);
