@@ -13,6 +13,7 @@ import {
 } from './sequences-actions';
 import { buildPlayerEventSequences } from './build-player-event-sequences';
 import { buildPlayerRoundsSequences } from './build-player-rounds-sequences';
+import { buildPlayerFullRoundsSequences } from './build-player-full-rounds-sequences';
 import { PlayerSequenceEvent } from './player-sequence-event';
 import { assertNever } from 'csdm/common/assert-never';
 
@@ -81,6 +82,10 @@ export const sequencesReducer = createReducer(initialState, (builder) => {
       switch (event) {
         case PlayerSequenceEvent.Rounds: {
           state[match.demoFilePath] = buildPlayerRoundsSequences(match, steamId);
+          break;
+        }
+        case PlayerSequenceEvent.FullRounds: {
+          state[match.demoFilePath] = buildPlayerFullRoundsSequences(match, steamId);
           break;
         }
         case PlayerSequenceEvent.Kills:

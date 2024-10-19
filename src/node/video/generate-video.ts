@@ -28,7 +28,7 @@ import { assertVideoGenerationIsPossible } from './assert-video-generation-is-po
 import { deleteSequencesRawFiles } from './sequences/delete-sequences-raw-files';
 import { uninstallCs2ServerPlugin } from '../counter-strike/launcher/cs2-server-plugin';
 
-type FfmpegSettings = {
+export type FfmpegSettings = {
   audioBitrate: number;
   constantRateFactor: number;
   videoContainer: VideoContainer;
@@ -38,7 +38,7 @@ type FfmpegSettings = {
   outputParameters: string;
 };
 
-type Parameters = {
+export type Parameters = {
   videoId: string;
   checksum: string;
   game: Game;
@@ -65,7 +65,7 @@ type Parameters = {
   onConcatenateSequencesStart: () => void;
 };
 
-async function buildVideos({ signal, ...options }: Parameters) {
+export async function buildVideos({ signal, ...options }: Parameters) {
   throwIfAborted(signal);
 
   const {
@@ -81,6 +81,8 @@ async function buildVideos({ signal, ...options }: Parameters) {
     onSequenceStart,
     onConcatenateSequencesStart,
   } = options;
+
+  console.log(options);
   const shouldConcatenate = concatenateSequences && sequences.length > 1;
 
   for (const sequence of sequences) {

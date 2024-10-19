@@ -4,6 +4,7 @@ import { DownloadFaceitCommand } from './commands/download-faceit-command';
 import { HelpCommand } from './commands/help-command';
 import { XlsxCommand } from './commands/xlsx-command';
 import { JsonCommand } from './commands/json-command';
+import { MassCommand } from './commands/mass';
 
 export const commands = {
   [AnalyzeCommand.Name]: AnalyzeCommand,
@@ -12,4 +13,5 @@ export const commands = {
   [HelpCommand.Name]: HelpCommand,
   [JsonCommand.Name]: JsonCommand,
   [XlsxCommand.Name]: XlsxCommand,
+  [MassCommand.Name]: MassCommand,
 };

@@ -48,7 +48,7 @@ export function AddVideoToQueueButton() {
         name: RendererClientMessageName.AddVideoToQueue,
         payload,
       });
-      navigate(RoutePath.Videos);
+      //navigate(RoutePath.Videos);
     } catch (error) {
       const errorCode = isErrorCode(error) ? error : ErrorCode.UnknownError;
       const message = getVideoErrorMessageFromErrorCode(match.game, errorCode);

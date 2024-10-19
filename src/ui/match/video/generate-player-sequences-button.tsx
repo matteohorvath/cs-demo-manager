@@ -56,6 +56,10 @@ function SelectPlayerDialog() {
       value: PlayerSequenceEvent.Rounds,
       label: <Trans context="Select option">Round</Trans>,
     },
+    {
+      value: PlayerSequenceEvent.FullRounds,
+      label: <Trans context="Select option">Full Round</Trans>,
+    },
   ];
   const [selectedSteamId, setSelectedSteamId] = useState(options.length > 0 ? options[0].value : undefined);
   const [selectedEvent, setSelectedEvent] = useState<PlayerSequenceEvent>(PlayerSequenceEvent.Kills);
@@ -79,7 +83,7 @@ function SelectPlayerDialog() {
   };
 
   const renderSelectedEventOptions = () => {
-    if (selectedEvent === PlayerSequenceEvent.Rounds) {
+    if (selectedEvent === PlayerSequenceEvent.Rounds || selectedEvent === PlayerSequenceEvent.FullRounds) {
       return null;
     }
 
