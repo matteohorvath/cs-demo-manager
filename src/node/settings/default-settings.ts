@@ -78,7 +78,7 @@ export const defaultSettings: Settings = {
       videoContainer: VideoContainer.MP4,
       videoCodec: 'libx264',
       audioCodec: 'libmp3lame',
-      inputParameters: '',
+      inputParameters: ' -hwaccel cuda ',
       outputParameters: '',
     },
     framerate: 32,
