@@ -1,10 +1,10 @@
 import { Button } from 'csdm/ui/components/buttons/button';
 import React from 'react';
 import { useSelectedMatches } from '../use-selected-matches';
-import { buildPlayerFullRoundsSequences } from 'csdm/ui/match/video/sequences/build-player-full-rounds-sequences';
+/*import { buildPlayerFullRoundsSequences } from 'csdm/ui/match/video/sequences/build-player-full-rounds-sequences';
 import type { Match } from 'csdm/common/types/match';
 import { fetchMatchesByChecksums } from 'csdm/node/database/matches/fetch-matches-by-checksums';
-
+*/
 export function MatchExtractButton() {
   const selectedMatches = useSelectedMatches();
 
