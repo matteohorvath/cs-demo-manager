@@ -9,7 +9,7 @@ export function MatchExtractButton() {
   const selectedMatches = useSelectedMatches();
 
   const onClick = async () => {
-    if (selectedMatches.length === 0) {
+    /*if (selectedMatches.length === 0) {
       return;
     }
     const matches: Match[] = await fetchMatchesByChecksums(selectedMatches.map((match) => match.checksum));
@@ -19,7 +19,7 @@ export function MatchExtractButton() {
         console.log(sequences);
         //    await addWholeDemToSeqs(match, sequences);
       }
-    }
+    }*/
   };
 
   if (selectedMatches.length === 0) {
