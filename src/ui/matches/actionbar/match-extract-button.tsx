@@ -4,12 +4,14 @@ import { useSelectedMatches } from '../use-selected-matches';
 import { buildPlayerFullRoundsSequences } from 'csdm/ui/match/video/sequences/build-player-full-rounds-sequences';
 import type { Match } from 'csdm/common/types/match';
 import { fetchMatchesByChecksums } from 'csdm/node/database/matches/fetch-matches-by-checksums';
-import { useMatchesTable } from '../table/use-matches-table';
 
 export function MatchExtractButton() {
   const selectedMatches = useSelectedMatches();
 
   const onClick = async () => {
+    if (selectedMatches.length === 0) {
+      return;
+    }
     const matches: Match[] = await fetchMatchesByChecksums(selectedMatches.map((match) => match.checksum));
     for (const match of matches) {
       for (const player of match.players) {
@@ -18,7 +20,6 @@ export function MatchExtractButton() {
         //    await addWholeDemToSeqs(match, sequences);
       }
     }
-    return 0;
   };
 
   if (selectedMatches.length === 0) {
