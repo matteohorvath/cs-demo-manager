@@ -27,7 +27,7 @@ class VideoQueue {
 
   public addVideo(partialVideo: AddVideoPayload) {
     const isUpdate = partialVideo.id;
-    const id = partialVideo.id ?? partialVideo.sequences[0].playerFocusName;
+    const id = partialVideo.id ?? partialVideo.checksum + '-' + partialVideo.sequences[0].playerFocusSteamId;
     const date = partialVideo.date ?? new Date().toISOString();
     const video: Video = {
       ...partialVideo,

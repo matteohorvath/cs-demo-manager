@@ -12,7 +12,6 @@ import { ErrorCode } from 'csdm/common/error-code';
 import type { Match } from 'csdm/common/types/match';
 import type { Sequence } from 'csdm/common/types/sequence';
 import type { AddVideoPayload } from 'csdm/common/types/video';
-import { useVideoSettings } from 'csdm/ui/settings/video/use-video-settings';
 import { AddVideoToQueueErrorDialog } from 'csdm/ui/match/video/add-video-to-queue-error-dialog';
 import { useDialog } from 'csdm/ui/components/dialogs/use-dialog';
 import { buildPlayerFullRoundsSequences } from 'csdm/ui/match/video/sequences/build-player-full-rounds-sequences';
@@ -37,18 +36,18 @@ export function MatchExtractButton() {
       videoContainer: 'mp4',
       videoCodec: 'libx264',
       audioCodec: 'libmp3lame',
-      inputParameters: '-hwaccel cuda',
+      inputParameters: '',
       outputParameters: '',
     },
     framerate: 32,
     generateOnlyRawFiles: false,
     height: 600,
     width: 800,
-    rawFilesFolderPath: 'D:\\dem-ext\\2\\vids',
-    outputFolderPath: 'D:\\dem-ext\\2\\vids',
+    rawFilesFolderPath: 'C:\\exp',
+    outputFolderPath: 'D:\\vids',
     hlae: {
       customLocationEnabled: false,
-      customExecutableLocation: 'C:\\HLAE\\HLAE.exe',
+      customExecutableLocation: "C:\\'Program Files (x86)'\\HLAEHLAE.exe",
       configFolderEnabled: false,
       configFolderPath: '',
     },
