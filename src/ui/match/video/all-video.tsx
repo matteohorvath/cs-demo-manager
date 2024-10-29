@@ -75,6 +75,8 @@ export function AllVideo() {
     return new Promise((resolve) => setTimeout(resolve, time));
   };*/
   const onClick = async () => {
+    console.log(settings);
+    return 0;
     try {
       for (const player of match.players) {
         // Await the dispatch if it returns a promise (e.g., if using redux-thunk)
