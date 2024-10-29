@@ -9,10 +9,14 @@ export function MatchExtractButton() {
   const selectedMatches = useSelectedMatches();
 
   const onClick = async () => {
-    /*if (selectedMatches.length === 0) {
+    if (selectedMatches.length === 0) {
       return;
+    } else {
+      for (const sm of selectedMatches) {
+        console.log(sm.checksum);
+      }
     }
-    const matches: Match[] = await fetchMatchesByChecksums(selectedMatches.map((match) => match.checksum));
+    /*const matches: Match[] = await fetchMatchesByChecksums(selectedMatches.map((match) => match.checksum));
     for (const match of matches) {
       for (const player of match.players) {
         const sequences = buildPlayerFullRoundsSequences(match, player.steamId);
