@@ -6,6 +6,7 @@ import { MatchDetailsButton } from './match-details-button';
 import { FuzzySearchTextInput } from './fuzzy-search-text-input';
 import { MatchesFilterDropdown } from './matches-filter-dropdown';
 import { RevealMatchesInExplorerButton } from './reveal-matches-in-explorer-button';
+import { MatchExtractButton } from './match-extract-button';
 
 export function MatchesActionBar() {
   return (
@@ -15,6 +16,7 @@ export function MatchesActionBar() {
           <MatchDetailsButton />
           <WatchMatchButton />
           <RevealMatchesInExplorerButton />
+          <MatchExtractButton />
         </>
       }
       right={

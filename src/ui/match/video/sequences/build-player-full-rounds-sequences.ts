@@ -18,7 +18,7 @@ export function buildPlayerFullRoundsSequences(match: Match, steamId: string) {
 
       sequences.push({
         number: sequences.length + 1,
-        startTick: round.startTick,
+        startTick: round.startTick + 1000,
         endTick: endTick + match.tickrate * endSecondsAfterEndTick,
         deathNotices: [],
         playerFocusSteamId: steamId,

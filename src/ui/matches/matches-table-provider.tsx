@@ -33,6 +33,7 @@ const fuzzySearchColumnIds: Paths<MatchTable>[] = [
   'teamBName',
   'serverName',
   'clientName',
+  'demoFilePath',
 ];
 
 type Props = {

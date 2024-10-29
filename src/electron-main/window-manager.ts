@@ -77,6 +77,7 @@ class WindowManager {
         nodeIntegration: true,
         preload: path.join(app.getAppPath(), 'dev-preload.js'),
         contextIsolation: false,
+        sandbox:false
       },
       backgroundColor: '#080808',
     });
